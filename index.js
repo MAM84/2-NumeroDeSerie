@@ -1,6 +1,7 @@
 const serialNumber = document.getElementById('serialNumber');
 const btnValid = document.getElementById('btnValid');
 const rslt = document.getElementById('rslt');
+const list = document.getElementById('list');
 
 serialNumber.value = "";
 
@@ -51,6 +52,7 @@ serialNumber.addEventListener('input', function(){
             }
             if (isValid) {
                 rslt.textContent = "Votre numéro de série est valide";
+                list.innerHTML = list.innerHTML + "<li>" + serialNumber.value + "</li>"
                 
             } else {
                 rslt.textContent = "Votre numéro de série n'est pas valide";
